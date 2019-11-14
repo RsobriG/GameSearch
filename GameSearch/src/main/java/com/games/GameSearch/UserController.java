@@ -12,12 +12,12 @@ public class UserController {
 		@Autowired
 		UserService service;
 		
-		@RequestMapping("/usersList")
-		public String showUsers(Model model) {
-			
-			model.addAttribute("usersList", service.findAll());
-			return "users/usersList";
-		}
+	/*
+	 * @RequestMapping("/usersList") public String showUsers(Model model) {
+	 * 
+	 * model.addAttribute("usersList", service.findAll()); return "users/usersList";
+	 * }
+	 */
 		
 		@RequestMapping("/newUser")
 		public String newUser() {

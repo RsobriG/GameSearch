@@ -17,7 +17,7 @@ import javax.persistence.Table;
 	@Column(name = "nickName")
 	private String nickName;
 
-	@Column(name = "Name")
+	@Column(name = "name")
 	private String name;
 
 	@Column(name = "surName")
