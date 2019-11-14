@@ -25,7 +25,7 @@ public class UserRelation {
 	@Column(name="timestamp")
 	private Timestamp tStamp;
 	
-	public enum Friendship{AMIGO,SOLICITUD,RECHAZADO,BLOQUEADO}
+	public enum Friendship{FRIEND,APPLICANT,REJECTED,BLOCKED};
 	@Column(name="friendship")
 	private Friendship friendship;
 
