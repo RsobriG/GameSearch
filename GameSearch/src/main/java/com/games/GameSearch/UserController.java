@@ -43,7 +43,7 @@ public class UserController {
 	  
 			service.insertUser(user); model.addAttribute("usersList", service.findAll());
 	  
-			return "gameHome/home";
+			return "home/home";
 	  
 		}
 		
@@ -52,7 +52,7 @@ public class UserController {
 			
 			//ver que esta en h2 y si es OK enviar a home con el perfil del user logueado  
 			
-			return "gameHome/home";
+			return "home/home";
 		}
 		
 		

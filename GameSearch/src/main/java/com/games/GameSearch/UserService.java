@@ -16,12 +16,12 @@ public class UserService {
 	
 	public void insertUser (User user) {
 		HttpEntity<User> request = new HttpEntity<>(user);
-		template.postForObject("http://localhost:8080/webapi/users", request, User.class);
+		template.postForObject("http://localhost:8083/webapi/users", request, User.class);
 		
 	}
 	
 	public Iterable<User> findAll(){
-		ResponseEntity<List<User>> response = template.exchange("http://localhost:8080/webapi/users", 
+		ResponseEntity<List<User>> response = template.exchange("http://localhost:8083/webapi/users", 
 				HttpMethod.GET, null, new ParameterizedTypeReference<List<User>>() {});
 		
 		List<User> users = response.getBody();
