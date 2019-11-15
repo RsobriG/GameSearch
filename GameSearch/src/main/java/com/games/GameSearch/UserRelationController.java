@@ -2,6 +2,7 @@ package com.games.GameSearch;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 //import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -16,6 +17,12 @@ public class UserRelationController {
 	@Autowired
 	UserRelationService service;
 	
+	@RequestMapping("/myrelations")
+	public String myRelations (String userid, Model model) {
+		model.addAttribute("myrelations", service.findbyUserId(userid));
+		return "userrelations/myrelations";
+	}
+	
 	
 	@RequestMapping("/addUserRelation")
 	public String addUserRelation (String user, String userTarget, Friendship state/*Model model*/) {
@@ -24,5 +31,7 @@ public class UserRelationController {
 		//model.addAttribute("library",service.findAll());
 		
 		return "games/gamesList";	}
+	
+	
 
 }
