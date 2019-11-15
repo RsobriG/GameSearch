@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet"
+	href="/webjars/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="/webjars/jquery/3.0.0/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<style>
+form{
+	margin: 100px;
+	text-align: center;
+	blackground: yellow;	
+}
+.formLogin{
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+ }
+
+</style>
+</head>
+<body>
+	<div class="formLogin">
+		<form action="insertUser">
+			<div class="form-group">
+				<label for="emailUser">Email:</label><input type="email" name="emailUser"
+					class="form-control" value="example@example.com" id="emailUser" required/>		
+			</div>
+			
+			<div class="form-group">
+				<label for="password">Password:</label><input type="password" name="password"
+					class="form-control" id="password" required/>		
+			</div>
+		
+			<div class="form-group">
+				<label for="rememberMe"> REMEMEBER ME</label><input type="checkbox" value="REMEMBER ME" id="rememberChkBox"/>
+			</div>
+			
+			<div class="form-group">
+				<button id="sendLogin" class="button">Login</button>
+				
+			</div>
+		</form>	
+		<form action="signIn">
+			<div class="form-group">
+				<button id="signIn" class="button">Sign in</button>
+				
+			</div>
+		
+		</form>	
+	</div>
+
+
+
+</body>
+</html>

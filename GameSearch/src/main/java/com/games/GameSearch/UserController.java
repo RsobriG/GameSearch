@@ -6,6 +6,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+
+
+
 @RequestMapping("/users")
 public class UserController {
 
@@ -19,19 +22,37 @@ public class UserController {
 	 * }
 	 */
 		
-		@RequestMapping("/newUser")
-		public String newUser() {
-			return "users/newUser";
+	/*
+	 * @RequestMapping("/newUser") public String newUser() { return "users/newUser";
+	 * }
+	 */
+		
+		@RequestMapping("/login")
+		public String login() {
+			return "users/login";
 		}
 		
-		@RequestMapping("/insertUser")
+		@RequestMapping("/signIn")
+		public String signIn() {
+			return "users/signIn";
+		}
+	
+		
+		@RequestMapping("/newUser") 
+		public String newUser(User user, Model model) {
+	  
+			service.insertUser(user); model.addAttribute("usersList", service.findAll());
+	  
+			return "gameHome/home";
+	  
+		}
+		
+		@RequestMapping ("/insertUser")
 		public String insertUser(User user, Model model) {
 			
-			service.insertUser(user);
-			model.addAttribute("usersList", service.findAll());
+			//ver que esta en h2 y si es OK enviar a home con el perfil del user logueado  
 			
-			return "users/usersList";
-			
+			return "gameHome/home";
 		}
 		
 		

@@ -50,7 +50,7 @@ public class Game{
 	@Column(name="place")
 	private String place;
 
-	public enum GameType{TABLE,ROL};
+	public enum GameType{BOARD,ROL};
 	@Column(name="gameType")
 	private GameType gametype;
 
