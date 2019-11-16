@@ -1,5 +1,6 @@
 package com.games.GameSearch;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -17,13 +18,21 @@ public class GameSesion {
 	@Column(name="gameid")
 	private long gameId;
 	@Column(name="timestamp")
-	private Date timeStamp;
+	private Timestamp timeStamp;
 	
-	public enum Relation{PLAYER,ADMIN,MASTER,ADMINMASTER,APPLICANT,GUEST,REMOVED};
+	public enum GRelation{PLAYER,ADMIN,MASTER,ADMINMASTER,APPLICANT,GUEST,REMOVED};
 	@Column(name="relation")
-	private Relation relation;
+	private GRelation grelation;
 	
 	//Constructores
+	
+	public GameSesion(long gameid, String userid, GRelation grelation) {
+		super();
+		this.gameId = gameid;
+		this.userid =userid;
+		this.grelation = grelation;
+		this.timeStamp = new Timestamp(System.currentTimeMillis());
+	}
 	
 	public GameSesion() {
 		super();
@@ -50,17 +59,17 @@ public class GameSesion {
 	public void setGameId(long gameId) {
 		this.gameId = gameId;
 	}
-	public Date getTimeStamp() {
+	public Timestamp getTimeStamp() {
 		return timeStamp;
 	}
-	public void setTimeStamp(Date timeStamp) {
+	public void setTimeStamp(Timestamp timeStamp) {
 		this.timeStamp = timeStamp;
 	}
-	public Relation getRelation() {
-		return relation;
+	public GRelation getRelation() {
+		return grelation;
 	}
-	public void setRelation(Relation relation) {
-		this.relation = relation;
+	public void setRelation(GRelation relation) {
+		this.grelation = relation;
 	}
 	
 }

@@ -26,5 +26,10 @@ public class GameSesionService {
 		List<GameSesion> gameplayers = response.getBody();
 		return gameplayers;
 	}
+	
+	public void addGameSesion(GameSesion gamesesion) {
+		HttpEntity<GameSesion> request = new HttpEntity<>(gamesesion);
+		template.postForObject("http://localhost:8080/webapi/insertgamesesion", request, GameSesion.class);
+	}
 
 }
