@@ -36,6 +36,11 @@ public class Place {
 		super();
 	}
 	
+	public Place(long placeid) {
+		super();
+		this.placeId = placeid;
+	}
+	
 	//Getters and Setters
 	
 	public long getPlaceId() {

@@ -18,5 +18,15 @@ public class PlaceService {
 		List<Place> places = response.getBody();
 		return places;
 	}
+	
+	public void addPlace(Place place) {
+		HttpEntity<Place> request = new HttpEntity<>(place);
+		template.postForObject("http://localhost:8083/webapi/addplace", request, Place.class);
+		
+	}
+	
+	public void deletePlace(Place place) {
+		template.delete("http://localhost:8083/webapi/deleteplace/" + place.getPlaceId());
+	}
 
 }
