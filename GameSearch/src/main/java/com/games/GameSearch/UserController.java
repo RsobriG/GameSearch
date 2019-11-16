@@ -55,6 +55,26 @@ public class UserController {
 			return "home/home";
 		}
 		
+		@RequestMapping("/searchUserByName")
+		public String findUserByName(User user, Model model) {
+			
+			service.findUserbyName(user);
+			model.addAttribute("usersFinded", service.findAll());
+			
+			
+			return "home/home";
+		}
+		
+		@RequestMapping("/searchUserByNickname")
+		public String findUserByNickname(User user, Model model) {
+			
+			service.findUserbyName(user);
+			model.addAttribute("nicknameFinded", service.findAll());
+			
+			
+			return "home/home";
+		}
+		
 		
 
 }

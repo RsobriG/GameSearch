@@ -28,5 +28,24 @@ public class UserService {
 		return users;
 	}
 
+	public Iterable<User> findUserbyName(User user) {
+		ResponseEntity<List<User>> response = template.exchange("http://localhost:8083/webapi/users", 
+				HttpMethod.GET, null, new ParameterizedTypeReference<List<User>>() {});
+		
+		List<User> users = response.getBody();
+		
+		return users;
+		
+	}
+	
+	public Iterable<User> findUserbyNickname(User user) {
+		ResponseEntity<List<User>> response = template.exchange("http://localhost:8083/webapi/users", 
+				HttpMethod.GET, null, new ParameterizedTypeReference<List<User>>() {});
+		
+		List<User> users = response.getBody();
+		
+		return users;
+		
+	}
 	
 }
