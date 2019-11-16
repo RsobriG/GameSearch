@@ -21,7 +21,7 @@ public class GameSesion {
 	private Timestamp timeStamp;
 	
 	public enum GRelation{PLAYER,ADMIN,MASTER,ADMINMASTER,APPLICANT,GUEST,REMOVED};
-	@Column(name="relation")
+	@Column(name="grelation")
 	private GRelation grelation;
 	
 	//Constructores
