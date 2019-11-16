@@ -2,6 +2,8 @@ package com.games.GameSearch;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,6 +11,8 @@ import javax.persistence.Table;
 @Table(name="places")
 public class Place {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "placeid", updatable = true, nullable = true)
 	private long placeId;
 	
 	@Column(name="name")
