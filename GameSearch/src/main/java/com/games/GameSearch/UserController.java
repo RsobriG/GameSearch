@@ -43,7 +43,7 @@ public class UserController {
 	  
 			service.insertUser(user); model.addAttribute("usersList", service.findAll());
 	  
-			return "home/home";
+			return "home/index";
 	  
 		}
 		
@@ -52,7 +52,7 @@ public class UserController {
 			
 			//ver que esta en h2 y si es OK enviar a home con el perfil del user logueado  
 			
-			return "home/home";
+			return "home/index";
 		}
 		
 		@RequestMapping("/searchUserByName")
@@ -62,7 +62,7 @@ public class UserController {
 			model.addAttribute("usersFinded", service.findAll());
 			
 			
-			return "home/home";
+			return "home/index";
 		}
 		
 		@RequestMapping("/searchUserByNickname")
@@ -72,7 +72,7 @@ public class UserController {
 			model.addAttribute("nicknameFinded", service.findAll());
 			
 			
-			return "home/home";
+			return "home/index";
 		}
 		
 		
