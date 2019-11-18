@@ -39,15 +39,54 @@ public class GameSesionService {
 				new ParameterizedTypeReference<ArrayList<GameSesion>>() {});
 
 		ArrayList<GameSesion> mygames = response.getBody();
-		return mygames;
+		ArrayList<GameSesion> lastgames = new ArrayList<GameSesion>();
+		GameSesion temp = new GameSesion();
+		for(GameSesion i:mygames) {
+			temp = i;
+			for(GameSesion z:mygames) {
+				
+				if (i.getGameId() == z.getGameId() && i.getUserid().equals(z.getUserid())) {					
+					if(z.getTimeStamp().after(i.getTimeStamp())) {
+						temp=z;
+					}					
+				}}
+			if(lastgames.contains(temp)) {
+					
+			}else {
+				lastgames.add(temp);
+			}			
+			}
+			
+		return lastgames;
 	}
 	
 	public Iterable<GameSesion> findbyGameId(long gameid){
 		//Long gamesesion= new Long(gameid);
-		HttpEntity<List<GameSesion>> response = template.exchange("http://localhost:8083/webapi/gameplayers",
-				HttpMethod.GET, null, new ParameterizedTypeReference<List<GameSesion>>() {});
-		List<GameSesion> gameplayers = response.getBody();
-		return gameplayers;
+		HttpEntity<ArrayList<GameSesion>> response = template.exchange(
+				"http://localhost:8083/webapi/gameplayers/?gameid="+gameid,
+				HttpMethod.GET, 
+				null, 
+				new ParameterizedTypeReference<ArrayList<GameSesion>>() {});
+		ArrayList<GameSesion> gameplayers = response.getBody();
+		ArrayList<GameSesion> lastgames = new ArrayList<GameSesion>();
+		GameSesion temp = new GameSesion();
+		for(GameSesion i:gameplayers) {
+			temp = i;
+			for(GameSesion z:gameplayers) {
+				
+				if (i.getGameId() == z.getGameId() && i.getUserid().equals(z.getUserid())) {					
+					if(z.getTimeStamp().after(i.getTimeStamp())) {
+						temp=z;
+					}					
+				}}
+			if(lastgames.contains(temp)) {
+					
+			}else {
+				lastgames.add(temp);
+			}			
+			}
+			
+		return lastgames;
 	}
 	
 	public void addGameSesion(GameSesion gamesesion) {

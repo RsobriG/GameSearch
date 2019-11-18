@@ -17,25 +17,31 @@ table , form {
 <h5> Stock</h5>
 <table>
 <tr>
-	<th>Id</th>
-	<th>Name</th>
-	<th>Price</th>
-	<th>Description</th>
-	<th>Producer</th>
-	<th>Category</th>
-	<th>Stock</th>
-	<th>Add</th>
-	<th>Sold</th>
-	<th>Stock Order</th>
-	<th>Active</th>
-	<th>Edit</th>
-	<th>Delete</th>
+	<th>SesionId</th>
+	<th>UserId</th>
+	<th>GameId</th>
 
 
 </tr>
-
+</table>
 <table>
-	<tr th:each="gameSesion:${gamesesionList}">
+	<tr th:each="gameSesion:${mygames}">
+	
+		<td th:text="${gameSesion.sesionId}"></td>
+		<td th:text="${gameSesion.userid}"></td>
+		<td th:text="${gameSesion.gameId}"></td>
+		<!-- <td th:text="${#temporals.day(gameSesion.timeStamp)}"></td> -->
+		<!-- <td th:text="${gameSesion.timeStamp}"></td> -->
+		<!-- <td th:text="${gameSesion.grelation}"></td> -->
+		
+
+            <!-- <td><a th:href="@{deleteGame(name=${gameSesion.sesionId})}"  
+               class="btn btn-primary">DELETE</a></td> -->
+
+	</tr>
+</table>
+<table>
+	<tr th:each="gameSesion:${gameplayers}">
 	
 		<td th:text="${gameSesion.sesionId}"></td>
 		<td th:text="${gameSesion.userid}"></td>

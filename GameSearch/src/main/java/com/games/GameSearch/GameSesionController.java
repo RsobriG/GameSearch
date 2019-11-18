@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.games.GameSearch.GameSesion.GRelation;
+
 
 
 @Controller
@@ -17,6 +17,7 @@ public class GameSesionController {
 	
 	@RequestMapping("/mygames")
 	public String myGames (String userid, Model model) {
+
 		model.addAttribute("mygames",service.findbyUserId(userid));
 		return "gamesesion/gamesesionList";
 	}
