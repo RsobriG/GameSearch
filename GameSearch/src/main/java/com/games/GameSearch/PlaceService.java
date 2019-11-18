@@ -20,7 +20,7 @@ public class PlaceService {
 	}
 	
 	public void addPlace(Place place) {
-		HttpEntity<Place> request = new HttpEntity<>(place);
+		HttpEntity<Place> request = new HttpEntity<Place>(place);
 		template.postForObject("http://localhost:8083/webapi/addplace", request, Place.class);
 		
 	}

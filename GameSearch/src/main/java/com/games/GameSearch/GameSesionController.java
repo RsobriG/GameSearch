@@ -18,18 +18,20 @@ public class GameSesionController {
 	@RequestMapping("/mygames")
 	public String myGames (String userid, Model model) {
 		model.addAttribute("mygames",service.findbyUserId(userid));
-		return "gamesesion/mygames";
+		return "gamesesion/gamesesionList";
 	}
 	
 	@RequestMapping("/gameplayers")
-	public String gamePlayers (String gameid, Model model) {
+	public String gamePlayers (long gameid, Model model) {
 		model.addAttribute("gameplayers",service.findbyGameId(gameid));
-		return "gamesesion/gameplayers";
+		return "gamesesion/gamesesionList";
 	}
 	
 	@RequestMapping("/addgamesesion")
-	public String addGameSesion(long gameid,String userid, GRelation relation) {
-		service.addGameSesion(new GameSesion(gameid,userid,relation));
+	public String addGameSesion(long gameid,String userid, String relation) {
+		relation = relation.toUpperCase();
+		GRelation parsedRelation = GRelation.valueOf(relation);
+		service.addGameSesion(new GameSesion(gameid,userid,parsedRelation));
 		return "gamesesion/gameplayers";
 	}
 

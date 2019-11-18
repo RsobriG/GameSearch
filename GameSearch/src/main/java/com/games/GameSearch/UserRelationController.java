@@ -24,13 +24,14 @@ public class UserRelationController {
 	}
 	
 	
-	@RequestMapping("/addUserRelation")
-	public String addUserRelation (String user, String userTarget, Friendship state/*Model model*/) {
-		
-		service.addUserRelation(new UserRelation(user,userTarget,state));
+	@RequestMapping("/adduserrelation")
+	public String addUserRelation (String user, String userTarget, String state/*Model model*/) {
+		state = state.toUpperCase();
+		Friendship parseFriendship = Friendship.valueOf(state);
+		service.addUserRelation(new UserRelation(user,userTarget,parseFriendship));
 		//model.addAttribute("library",service.findAll());
 		
-		return "games/gamesList";	}
+		return "userrelations/myrelations";	}
 	
 	
 

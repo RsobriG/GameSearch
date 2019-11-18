@@ -24,7 +24,7 @@ public class UserRelationService {
 	
 	public void addUserRelation(UserRelation rel) {
 		
-		HttpEntity<UserRelation> request = new HttpEntity<>(rel);
+		HttpEntity<UserRelation> request = new HttpEntity<UserRelation>(rel);
 		template.postForObject("http://localhost:8083/webapi/adduserrelation",request,UserRelation.class);
 		
 	}
