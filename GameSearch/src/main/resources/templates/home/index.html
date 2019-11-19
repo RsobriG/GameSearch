@@ -1,255 +1,50 @@
 <!DOCTYPE html>
-<html style="width: 1400px;height: 800PX;">
 
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>BootStrapNou_v2_0</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+
+<link rel="stylesheet" href="/webjars/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="/webjars/jquery/3.0.0/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<style>
+table , form {
+	margin:20px;
+}
+
+</style>
 </head>
 
-<body style="width: 1210px;background-color: rgb(79,76,76);">
-    <div class="container"><img src="/assets/img/images4%20copy%20gif.gif?h=c44734f409cc6b1ad50d8b37e04afab0"></div>
-    <!-- Start: Grid - 6 Columns Desktop + 3 x 2 Columns Tablet + -->
-    <div class="row" style="height: 500px;margin: 20px;width: 1070px;">
-        <div class="col" style="width: 1500px;height: 600px;background-color: #4b4949;"><iframe allowfullscreen frameborder="0" width="500" height="500" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCAeeonIYk-3q5ojT8VJSCZy6yFQa0bP9Q&q=Space+Needle,Seattle+WA"></iframe>
-            <!-- Start: usertab -->
-            <div class="flex-fill" style="width: 500px;margin-left: 560px;margin-top: -670px;height: 500px;">
-                <ul class="nav nav-tabs" style="margin-top: 275px;width: 500px;margin-left: -10px;">
-                    <!-- Start: game -->
-                    <li class="nav-item" style="margin-top: -100px;"><a class="nav-link active text-nowrap border-dark shadow flex-column visible" role="tab" data-toggle="tab" href="#tab-1" style="width: 125px;background-color: rgb(181,180,180);font-weight: bold;color: rgb(75,75,75);font-size: 16px;height: 36px;">Partidas</a></li>
-                    <!-- End: game -->
-                    <!-- Start: Amigos -->
-                    <li class="nav-item" style="margin-top: -100px;"><a class="nav-link text-nowrap border-dark shadow flex-column visible" role="tab" data-toggle="tab" href="#tab-2" style="width: 125px;background-color: #767676;font-weight: bold;color: rgb(208,208,208);height: 36px;">Amigos</a></li>
-                    <!-- End: Amigos -->
-                    <!-- Start: Locales -->
-                    <li class="nav-item"><a class="nav-link text-nowrap border-dark shadow flex-column visible" role="tab" data-toggle="tab" href="#tab-3" style="font-weight: bold;height: 36px;background-color: rgb(72,72,72);color: rgb(255,255,255);width: 125px;margin-top: -100px;">Locales</a></li>
-                    <!-- End: Locales -->
-                    <!-- Start: User -->
-                    <li class="nav-item"><a class="nav-link text-nowrap border rounded border-dark shadow flex-column visible" role="tab" data-toggle="tab" href="#tab-4" style="width: 125px;background-color: rgb(0,0,0);font-weight: bold;color: rgb(208,208,208);font-size: 14;height: 36px;margin-top: -100px;">Usuario</a></li>
-                    <!-- End: User -->
-                </ul>
-                <div class="tab-content" style="margin-left: -10px;margin-top: 0px;">
-                    <!-- Start: panelPartida -->
-                    <div class="tab-pane fade show active flex-nowrap visible" role="tabpanel" id="tab-1" style="margin-top: 300px;width: 480px;margin-left: px;">
-                        <div class="table-responsive" style="width: 480px;height: px;margin-left: 5px;">
-                            <table class="table">
-                                <thead style="width: 470px;margin-top: 50px;">
-                                    <tr data-aos="fade" data-aos-once="true" style="width: 200px;margin-left: 20px;margin-top: -200px;">
-                                        <th style="height: 40px;font-size: 12px;margin-left: 0px;">Juego</th>
-                                        <th style="font-size: 12px;">Column 2</th>
-                                        <th style="font-size: 12px;">Column 2</th>
-                                        <th style="font-size: 12px;">Disponible</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="d-inline-flex sr-only" data-aos="fade" style="width: 450px;">
-                                    <tr style="width: 450px;">
-                                        <td>Cell 1</td>
-                                        <td>Cell 2</td>
-                                        <td>Cell 3</td>
-                                        <td>Cell 4</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- Start: paragrafPartida -->
-                        <p class="text-nowrap border rounded-0 border-dark" style="width: 500px;height: 460px;background-color: rgb(180,179,179);font-weight: normal;color: rgb(0,0,0);margin-top: -463px;"></p>
-                        <!-- End: paragrafPartida -->
-                    </div>
-                    <!-- End: panelPartida -->
-                    <!-- Start: panelAmigos -->
-                    <div class="tab-pane fade text-nowrap flex-row flex-nowrap visible" role="tabpanel" id="tab-2" style="width: 500px;height: 460px;color: rgb(84,84,84);background-color: rgb(118,118,118);margin-top: 290xp;">
-                        <div class="table-responsive" style="color: rgb(194,193,193);margin-left: 15px;font-size: 12px;height: 300px;width: 480px;margin-top: 0px;">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 100px;height: 25px;">NickAmigos</th>
-                                        <th style="width: 150px;height: 25px;">Nombre</th>
-                                        <th style="width: 20px;height: 25px;">Adm/Master/jugador</th>
-                                    </tr>
-                                </thead>
-                                <tbody style="font-size: 14px;height: 40px;">
-                                    <tr style="height: 25px;">
-                                        <!-- Start: NickAmigos -->
-                                        <td>Cell 1</td>
-                                        <!-- End: NickAmigos -->
-                                        <td>Cell 2</td>
-                                        <td>Cell 3</td>
-                                    </tr>
-                                    <tr style="height: 25px;">
-                                        <td>Cell 3</td>
-                                        <td>Cell 4</td>
-                                        <td>Cell 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cell 1</td>
-                                        <td>Cell 2</td>
-                                        <td>Cell 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cell 1</td>
-                                        <td>Cell 2</td>
-                                        <td>Cell 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cell 1</td>
-                                        <td>Cell 2</td>
-                                        <td>Cell 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cell 1</td>
-                                        <td>Cell 2</td>
-                                        <td>Cell 3</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- Start: sesionAmigos --><input class="flex-nowrap order-2" type="text" style="width: 100px;height: 25px;margin-top: 10px;margin-left: 800px;">
-                        <!-- End: sesionAmigos -->
-                        <p style="margin-left: 830px;margin-top: -25px;width: 100px;color: rgb(255,255,255);">Session ID</p>
-                        <!-- Start: name --><input class="flex-nowrap order-2" type="text" style="width: 100px;height: 25px;margin-top: -15px;margin-left: 800px;">
-                        <!-- End: name -->
-                        <!-- Start: name -->
-                        <p style="margin-left: 820px;margin-top: -25px;width: 100px;color: rgb(255,255,255);">Name</p>
-                        <!-- End: name -->
-                        <p style="margin-left: 410px;margin-top: 20px;color: rgb(255,255,255);">Game ID</p>
-                        <!-- Start: timestamp --><input class="flex-nowrap order-2" type="text" style="width: 200px;height: 25px;margin-top: -45px;margin-left: 800px;">
-                        <!-- End: timestamp --><input class="flex-nowrap order-2" type="text" style="width: 200px;height: 25px;margin-top: px;margin-left: 200px;">
-                        <!-- Start: userName --><input class="flex-nowrap order-2" type="text" style="width: 80px;height: 25px;margin: px;margin-top: px;margin-left: 150px;">
-                        <!-- End: userName -->
-                        <!-- Start: timestamp -->
-                        <p style="margin-left: 800px;margin-top: -250px;width: 100px;">Paragraph</p>
-                        <!-- End: timestamp -->
-                        <p style="margin-left: 800px;margin-top: -25px;">Paragraph</p>
-                    </div>
-                    <!-- End: panelAmigos -->
-                    <!-- Start: panelDonde -->
-                    <div class="tab-pane fade text-nowrap flex-nowrap visible" role="tabpanel" id="tab-3" style="width: 500px;height: 460px;background-color: #484848;margin-top: 0px;">
-                        <!-- Start: name --><input type="text" style="margin-top: 10px;margin-left: 670px;width: 200px;">
-                        <!-- End: name -->
-                        <p style="width: 100px;margin-top: -25px;margin-left: 810px;">Nombre</p>
-                        <!-- Start: description --><input type="text" style="margin-top: -20px;margin-left: 670px;width: 200px;">
-                        <!-- End: description -->
-                        <p style="width: 100px;margin-top: -20px;margin-left: 510px;">Description</p>
-                        <div class="table-responsive" style="color: rgb(207,206,193);height: 300px;">
-                            <table class="table">
-                                <thead style="color: rgb(205,206,207);width: 300PX;">
-                                    <tr style="height: 20px;width: 300px;margin-left: 10px;">
-                                        <th class="border rounded-0 border-white" style="color: rgb(208,208,208);height: 30px;margin-left: 10px;font-size: 12px;width: 100px;">Fecha Partida</th>
-                                        <th style="color: rgb(208,208,208);height: 30px;font-size: 12px;width: 100px;">Local</th>
-                                        <th class="table-active text-truncate border rounded-0 border-white flex-wrap" style="color: rgb(208,208,208);height: 30px;width: 50px;font-size: 12px;">Plazas Disp.</th>
-                                        <th class="border rounded-0 border-white" style="color: rgb(208,208,208);height: 30px;font-size: 12px;width: 50px;">Column 4</th>
-                                        <th>Column 5</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="border rounded-0 border-white shadow">
-                                        <td class="border rounded-0 border-white" style="color: rgb(208,208,208);">Cell 1</td>
-                                        <td class="border rounded-0" style="color: rgb(208,208,208);">Cell 2</td>
-                                        <td class="text-center border rounded-0" style="color: rgb(208,208,208);">Cell 3</td>
-                                        <td class="border rounded-0 border-white" style="color: rgb(208,208,208);">Cell 4</td>
-                                        <td>Cell 5</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="border rounded-0" style="color: rgb(208,208,208);">Cell 1</td>
-                                        <td class="border rounded-0" style="color: rgb(208,208,208);">Cell 1</td>
-                                        <td class="text-center border rounded-0" style="color: rgb(208,208,208);">Cell 3</td>
-                                        <td class="border rounded-0" style="color: rgb(208,208,208);">Cell 4</td>
-                                        <td>Cell 5</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="border rounded-0">Cell 1</td>
-                                        <td class="border rounded-0">Cell 2</td>
-                                        <td class="text-center border rounded-0">Cell 3</td>
-                                        <td>Cell 4</td>
-                                        <td class="border rounded-0 border-white">Cell 5</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="border rounded-0">Cell 1</td>
-                                        <td class="border rounded-0">Cell 2</td>
-                                        <td class="text-center border rounded-0">Cell 3</td>
-                                        <td class="border rounded-0">Cell 4</td>
-                                        <td class="border rounded-0 border-white">Cell 5</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- Start: latitude --><input type="text" style="margin-top: -20px;margin-left: 800px;width: 200px;">
-                        <!-- End: latitude -->
-                        <p style="width: 100px;margin-top: -20px;margin-left: 810px;">Latitud</p>
-                        <!-- Start: longitude --><input type="text" style="margin-top: -20px;margin-left: 170px;width: 200px;">
-                        <!-- End: longitude -->
-                        <p style="width: 100px;margin-top: -20px;margin-left: 510px;">Longitud</p><input type="text" style="margin-top: -20px;margin-left: 870px;width: 200px;">
-                        <p style="width: 100px;margin-top: -20px;margin-left: 510px;">Paragraph</p><input type="text" style="margin-top: -20px;margin-left: 170px;width: 200px;">
-                        <p style="width: 100px;margin-top: -20px;margin-left: 510px;">Paragraph</p><input type="text" style="margin-top: -20px;margin-left: 170px;width: 200px;">
-                        <p style="width: 100px;margin-top: -20px;margin-left: 510px;">Paragraph</p><input type="text" style="margin-top: -20px;margin-left: 670px;width: 200px;">
-                        <p style="width: 100px;margin-top: -20px;margin-left: 510px;">Paragraph</p><input type="text" style="margin-top: -20px;margin-left: 670px;width: 200px;">
-                        <p style="width: 100px;margin-top: -20px;margin-left: 510px;">Paragraph</p>
-                    </div>
-                    <!-- End: panelDonde -->
-                    <!-- Start: panelUser -->
-                    <div class="tab-pane fade text-nowrap visible" role="tabpanel" id="tab-4" style="width: 500px;height: 420px;background-color: #000000;margin: px;margin-top: px;font-size: 12px;">
-                        <!-- Start: nickName --><input type="text" style="width: 230px;margin: px;margin-top: 10px;height: 20px;margin-left: 150px;">
-                        <!-- End: nickName -->
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(208,208,208);margin: 0px;margin-top: -20px;margin-left: 10px;font-size: 12px;">Nickname</p>
-                        <!-- Start: Name --><input type="text" style="width: 130px;margin: px;margin-top: 30px;height: 20px;margin-left: 10px;">
-                        <!-- End: Name -->
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(208,208,208);margin: 0px;margin-top: -40px;margin-left: 10px;font-size: 12px;">Nombre</p>
-                        <!-- Start: surName --><input type="text" style="width: 230px;margin: px;margin-top: -0px;height: 20px;margin-left: 150px;">
-                        <!-- End: surName -->
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(208,208,208);margin: 0px;margin-top: -50px;margin-left: 150px;font-size: 12px;">Apellidos</p>
-                        <!-- Start: adress --><input type="text" style="width: 230px;margin: px;margin-top: 50px;height: 20px;margin-left: 150px;">
-                        <!-- End: adress -->
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(208,208,208);margin: 0px;margin-top: -40px;margin-left: 150px;font-size: 12px;">Dirección</p>
-                        <!-- Start: userCP --><input type="text" style="width: 130px;margin: px;margin-top: -40px;height: 20px;margin-left: 10px;">
-                        <!-- End: userCP -->
-                        <p class="text-nowrap" style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(208,208,208);margin: 0px;margin-top: -40px;margin-left: 10px;font-size: 12px;">C. P.</p>
-                        <!-- Start: userPoblacion --><input type="text" style="width: 230px;margin: px;margin-top: 30px;height: 20px;margin-left: 150px;">
-                        <!-- End: userPoblacion -->
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(208,208,208);margin: 0px;margin-top: -20px;margin-left: 10px;font-size: 12px;">Población</p>
-                        <!-- Start: userProvincia --><input type="text" style="width: 230px;margin: px;margin-top: 10px;height: 20px;margin-left: 150px;">
-                        <!-- End: userProvincia -->
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(208,208,208);margin: 0px;margin-top: -30px;margin-left: 10px;font-size: 12px;">Provincia</p><input type="tel" style="height: 20px;width: 230px;margin-left: 150px;margin-top: 20px;">
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(208,208,208);margin: 0px;margin-top: -20px;margin-left: 10px;font-size: 12px;">Teléfono</p><input type="email" style="height: 20px;margin-left: 150px;width: 230px;margin-top: 10px;">
-                        <p style="width: 200px;height: 20px;background-color: rgb(b3e3e);color: rgb(208,208,208);margin: 0px;margin-top: -20px;margin-left: 10px;">e-mail</p>
-                        <!-- Start: birthday --><input class="justify-content-center align-items-center align-content-sm-center align-content-md-center align-content-lg-center align-content-xl-center" type="date" style="width: 230px;height: 20px;margin-left: 150px;font-size: 14px;margin-top: 10px;font-family: Actor, sans-serif;filter: sepia(0%);">
-                        <!-- End: birthday -->
-                        <!-- Start: birthday -->
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(208,208,208);margin: 0px;margin-top: -20px;margin-left: 10px;">Fecha nacimiento</p>
-                        <!-- End: birthday -->
-                        <!-- Start: userOtro1 --><input type="text" style="width: 230px;margin: px;margin-top: 10px;height: 20px;margin-left: 150px;">
-                        <!-- End: userOtro1 -->
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(208,208,208);margin: 0px;margin-top: -20px;margin-left: 10px;">Password</p>
-                        <!-- Start: homelat --><input type="text" style="width: 230px;margin: px;margin-top: 10px;height: 20px;margin-left: 150px;">
-                        <!-- End: homelat -->
-                        <!-- Start: homelat -->
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(208,208,208);margin: 0px;margin-top: -20px;margin-left: 10px;">Domicilio Latitud</p>
-                        <!-- End: homelat -->
-                        <!-- Start: homelong --><input type="text" style="width: 230px;margin: px;margin-top: 10px;height: 20px;margin-left: 150px;">
-                        <!-- End: homelong -->
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(208,208,208);margin: 0px;margin-top: -10px;margin-left: 10px;">Domicilio Long</p>
-                        <!-- Start: usertOtro4 --><input type="text" style="width: 230px;margin: px;margin-top: 10px;height: 20px;margin-left: 150px;">
-                        <!-- End: usertOtro4 -->
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(208,208,208);margin: 0px;margin-top: -20px;margin-left: 10px;">Otro 4</p>
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(0,0,0);margin: 0px;margin-top: -20px;margin-left: 10px;"></p>
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(0,0,0);margin: 0px;margin-top: -20px;margin-left: 10px;"></p>
-                        <p style="width: 100px;height: 20px;background-color: rgb(b3e3e);color: rgb(0,0,0);margin: 0px;margin-top: -20px;margin-left: 10px;"></p>
-                    </div>
-                    <!-- End: panelUser -->
-                </div>
-            </div>
-            <!-- End: usertab -->
-        </div>
-    </div>
-    <!-- End: Grid - 6 Columns Desktop + 3 x 2 Columns Tablet + -->
-    <!-- Start: Grid - 1 Row & 1 Column -->
-    <div class="row" style="height: 200px;margin-top: 50PX;"></div>
-    <!-- End: Grid - 1 Row & 1 Column -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
-    <script src="/assets/js/script.min.js?h=2a0d40cabb24d9b4a16bf3644a15df35"></script>
-</body>
+<table>
+	<!-- <tr th:each="users:${nicknameFinded}"> -->
+		
+		Welcome <h th:text="${nicknameFinded}" ></h>
+	
+	</tr>
+</table>
+
+<form action="newGame">
+<input type="submit" value="Create Game" class="btn btn-primary"/>
+</form>
+
+Games Created:
+<table>
+	<tr th:each="games:${gamesList}">
+	
+		<td th:text="${games.gameId}"></td>
+		<td th:text="${games.name}"></td>
+		<td th:text="${games.address}"></td>
+		<td th:text="${games.date}"></td>
+		<td th:text="${games.description}"></td>
+		<td th:text="${games.latitude}"></td>
+		<td th:text="${games.longitude}"></td>
+		<td th:text="${games.maxPlayers}"></td>
+		<td th:text="${games.place}"></td>
+		
+
+          <!--   <td><a th:href="@{deleteGame(name=${games.gameId})}"  
+               class="btn btn-primary">DELETE</a></td> -->
+
+	</tr>
+</table>
 
 </html>
