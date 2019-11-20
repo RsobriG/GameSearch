@@ -6,16 +6,16 @@ Mock Ups
 
 [Mock Ups](https://drive.google.com/drive/u/2/folders/1SiNAbKq6SXKUwT-XauCS0SuvEs7MmChp)
 
-UML's
+UML
 Lucid Chart:
 
 [Link](https://drive.google.com/drive/u/2/folders/1miCiVymYeS5FgTQ7lReGD1kOb7yyRdXw)
   
-Use Case:
+UML Use Case:
 
 [Link](https://drive.google.com/drive/u/2/folders/1xcYnR6dCaOm7lXe5Jugu1tlWSS6A2W0k)
   
-Secuence:
+UML Secuence:
 
 [New User](https://drive.google.com/drive/u/2/folders/1NRIf8aXSMIC-jR4qhnfDqUb8A6w1qSWP)
   
