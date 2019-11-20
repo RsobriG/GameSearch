@@ -2,20 +2,20 @@
 Java Project CIFO
 
 
-*Mock Ups
+* Mock Ups
 
 [Mock Ups](https://drive.google.com/drive/u/2/folders/1SiNAbKq6SXKUwT-XauCS0SuvEs7MmChp)
 
-*UML
+* UML
 Lucid Chart:
 
 [Link](https://drive.google.com/drive/u/2/folders/1miCiVymYeS5FgTQ7lReGD1kOb7yyRdXw)
   
-*UML Use Case:
+* UML Use Case:
 
 [Link](https://drive.google.com/drive/u/2/folders/1xcYnR6dCaOm7lXe5Jugu1tlWSS6A2W0k)
   
-*UML Secuence:
+* UML Secuence:
 
 [New User](https://drive.google.com/drive/u/2/folders/1NRIf8aXSMIC-jR4qhnfDqUb8A6w1qSWP)
   
@@ -39,11 +39,11 @@ Lucid Chart:
     
 [Login](https://drive.google.com/drive/u/2/folders/1d0QeWvZoOtH9fXTZddkSHuLEcF6p_31R)
     
-*Game&Talk.ppt
+* Game&Talk.ppt
 
 [Game&Talk](https://docs.google.com/presentation/d/1246rVkFHn2dqfq0K4gXWWTSHFYqi-N2ree-20jrJ7EU/edit#slide=id.p)
  
-*Documento
+* Documento
 
 [Documento](https://docs.google.com/document/d/19WStIGqi3qIQxv0nm0o0-EJ0xM6gd118JpW0LwFflhE/edit)
 
