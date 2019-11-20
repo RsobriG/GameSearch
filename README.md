@@ -47,5 +47,7 @@ Lucid Chart:
 
 [Documento](https://docs.google.com/document/d/19WStIGqi3qIQxv0nm0o0-EJ0xM6gd118JpW0LwFflhE/edit)
 
- 
+* Link Server
+
+[Server](https://github.com/RsobriG/GameSearchRestServer)
 
