@@ -1,6 +1,9 @@
 # GameSearch
 Java Project CIFO
 
+Nuestro programa se divide en dos repositorios. En este está subido nuestro programa controlador
+de Cliente. La parte de la API-REST está en:
+https://github.com/RsobriG/GameSearchRestServer
 
 * Mock Ups
 
