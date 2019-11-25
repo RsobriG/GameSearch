@@ -13,20 +13,6 @@ table , form {
 
 </style>
 </head>
-
-<table>
-	<!-- <tr th:each="users:${nicknameFinded}"> -->
-		
-		Welcome <h th:text="${nicknameFinded}" ></h>
-	
-	</tr>
-</table>
-
-<form action="newGame">
-<input type="submit" value="Create Game" class="btn btn-primary"/>
-</form>
-
-Games Created:
 <table>
 	<tr th:each="games:${gamesList}">
 	
@@ -41,10 +27,14 @@ Games Created:
 		<td th:text="${games.place}"></td>
 		
 
-          <!--   <td><a th:href="@{deleteGame(name=${games.gameId})}"  
-               class="btn btn-primary">DELETE</a></td> -->
+            <td><a th:href="@{deleteGame(name=${games.gameId})}"  
+               class="btn btn-primary">DELETE</a></td>
 
 	</tr>
 </table>
 
+<form action="newGame">
+<input type="submit" value="NEW" class="btn btn-primary"/>
+
+</form>
 </html>

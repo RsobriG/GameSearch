@@ -25,6 +25,9 @@ import javax.persistence.Table;
 
 	@Column(name = "mail")
 	private String mail;
+	
+	@Column(name = "usersession")
+	private String usersession;
 
 	@Column(name = "password")
 	private String password;
@@ -64,6 +67,14 @@ import javax.persistence.Table;
 
 	public String getName() {
 		return name;
+	}
+	
+	public String getUsersession() {
+		return usersession;
+	}
+
+	public void setUsersession(String usersession) {
+		this.usersession = usersession;
 	}
 
 	public void setName(String name) {

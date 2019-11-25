@@ -1,5 +1,7 @@
 package com.games.GameSearch;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,23 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 
-@RequestMapping("/users")
+@RequestMapping("/")
 public class UserController {
 
 		@Autowired
 		UserService service;
-		
-	/*
-	 * @RequestMapping("/usersList") public String showUsers(Model model) {
-	 * 
-	 * model.addAttribute("usersList", service.findAll()); return "users/usersList";
-	 * }
-	 */
-		
-	/*
-	 * @RequestMapping("/newUser") public String newUser() { return "users/newUser";
-	 * }
-	 */
 		
 		@RequestMapping("/login")
 		public String login() {
@@ -39,20 +29,18 @@ public class UserController {
 	
 		
 		@RequestMapping("/newUser") 
-		public String newUser(User user, Model model) {
-	  
-			service.insertUser(user); model.addAttribute("usersList", service.findAll());
-	  
-			return "home/index";
-	  
-		}
-		
-		@RequestMapping ("/insertUser")
-		public String insertUser(User user, Model model) {
+		public String newUser(User user, Model model, HttpSession session) { 
+				
+				
+			user.setUsersession(session.getId());
 			
-			//ver que esta en h2 y si es OK enviar a home con el perfil del user logueado  
+			service.insertNewUserToDB(user);
+			
+			model.addAttribute("usersList", service.findUserbyNickname(user.getNickName()));
+			
 			
 			return "home/index";
+	  
 		}
 		
 		@RequestMapping("/searchUserByName")
@@ -75,6 +63,17 @@ public class UserController {
 			return "home/index";
 		}
 		
-		
+		@RequestMapping ("/searchUserByEmail")
+		public String searchUserByEmail (User user, Model model) {
+			
+			User userLoging = new User();
+			
+			if(user.getMail().equals(userLoging.getMail())) {
+				model.addAttribute("userRegistered", service.findUserByEmail(user.getMail()));
+				return "home/home";
+			}
+			
+			return "home/error";
+		}
 
 }
